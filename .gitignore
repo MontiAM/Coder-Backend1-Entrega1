@@ -6,6 +6,7 @@ mock
 
 #Ignora archivos dentro de data
 /data/*
+!/data/.gitkeep
 
 #Ignoro consignas
 /consignas.txt
