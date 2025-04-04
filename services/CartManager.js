@@ -3,7 +3,7 @@ import ProductManager from './ProductManager.js';
 export default class CartManager {
     constructor(filePath) {
         this.filePath = filePath;
-        this.productManager = new ProductManager('./products.json');
+        this.productManager = new ProductManager('./data/products.json');
     }
     async getCarts(){
         try {
@@ -75,8 +75,8 @@ export default class CartManager {
     async removeProductFromCart(cartId, productId){
         try {
             const carts = await this.getCarts();
-            const cartIndex = carts.findIndex( c => c.id === cartId);
-
+            const cartIndex = carts.findIndex( cart => cart.id === cartId);
+                        
             if ( cartIndex === -1) throw new Error(`Carrito con id: ${cartId} no encontrado`);
 
             carts[cartIndex].products = carts[cartIndex].products.filter(p => p.id !== productId);

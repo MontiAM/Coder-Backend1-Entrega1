@@ -1,2 +1,11 @@
 # Ignora la carpeta node_modules
 node_modules
+
+# Ignora la carpeta node_modules
+mock
+
+#Ignora archivos dentro de data
+/data/*
+
+#Ignoro consignas
+/consignas.txt
